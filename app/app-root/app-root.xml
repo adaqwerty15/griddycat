@@ -1,0 +1,44 @@
+<!--
+RadSideDrawer is a UI component part of the Progress NativeScript UI set of components.
+Learn more about the RadSideDrawer UI component and how it can be customized in this documentation article:
+https://docs.nativescript.org/ui/professional-ui-components/SideDrawer/getting-started
+-->
+<Page class="page" loaded="onLoaded" actionBarHidden="true" xmlns="http://schemas.nativescript.org/tns.xsd">
+<nsDrawer:RadSideDrawer id="sideDrawer" xmlns:nsDrawer="nativescript-ui-sidedrawer" loaded="onLoaded" class="ns-statusbar-transparent">
+    <nsDrawer:RadSideDrawer.drawerTransition>
+        <nsDrawer:SlideInOnTopTransition/>
+    </nsDrawer:RadSideDrawer.drawerTransition>
+
+    <nsDrawer:RadSideDrawer.drawerContent>
+        <GridLayout rows="auto, *" class="nt-drawer__content">
+            <StackLayout class="nt-drawer__header">
+                <Image class="nt-drawer__header-image fas t-36" src="res://icon" />
+                <Label class="nt-drawer__header-brand" text="{{ user }}" />
+            </StackLayout>
+
+            <ScrollView row="1">
+                <StackLayout>
+                    <GridLayout columns="auto, *" class="{{ 'nt-drawer__list-item' + (selectedPage === 'Monitor' ? ' -selected': '') }}"
+                        route="monitor/monitor-page" title="Monitor" tap="onNavigationItemTap">
+                        <Label row="0" col="0" text="&#xf108;" class="nt-icon fas" />
+                        <Label row="0" col="1" text="Монитор" class="p-r-10" />
+                    </GridLayout>
+
+                    <!-- <StackLayout class="hr"></StackLayout> -->
+
+                    <GridLayout columns="auto, *" class="{{ 'nt-drawer__list-item' + (selectedPage === 'Logout' ? ' -selected': '') }}"
+                        route="login/login-page" title="Logout" tap="onNavigationItemTap">
+                        <Label row="0" col="0" class="nt-icon fas" />
+                        <Label row="0" col="1" text="Выход" class="p-r-10" />
+                    </GridLayout>
+
+                </StackLayout>
+            </ScrollView>
+        </GridLayout>
+    </nsDrawer:RadSideDrawer.drawerContent>
+
+    <nsDrawer:RadSideDrawer.mainContent>
+        <Frame defaultPage="monitor/monitor-page"></Frame>
+    </nsDrawer:RadSideDrawer.mainContent>
+</nsDrawer:RadSideDrawer>
+</Page>

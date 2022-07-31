@@ -1,0 +1,46 @@
+<Page
+    class="page"
+    navigatingTo="onNavigatingTo" 
+    loaded="onPageLoaded" 
+    xmlns:chart="nativescript-ui-chart"
+    xmlns:PullRefresh="@nstudio/nativescript-pulltorefresh"
+    xmlns:lv="nativescript-ui-listview"
+    xmlns:nsDrawer="nativescript-ui-sidedrawer"
+    xmlns="http://schemas.nativescript.org/tns.xsd"
+>
+
+    <ActionBar class="action-bar">
+        <NavigationButton ios:visibility="collapsed" icon="res://menu" tap="onDrawerButtonTap"></NavigationButton>
+        <StackLayout orientation="horizontal"  ios:horizontalAlignment="left" android:horizontalAlignment="left">
+            <Label class="action-bar-title" text="GriddyCat"></Label>           
+        </StackLayout>        
+
+         <ActionItem visibility="{{ process ? 'collapse' : 'visible' }}" id="edit" ios.systemIcon="2" icon="res://edit" ios.position="right" tap="onEditButtonTap"></ActionItem>
+    </ActionBar>
+
+    <GridLayout  rows="*, auto">
+        <PullRefresh:PullToRefresh refresh="refreshCards" backgroundColor="#fff" color="#485479">
+            <ScrollView  orientation="vertical" flexGrow="1">
+            <GridLayout class="page-content" rows="*, auto"> 
+                <FlexboxLayout id="container" flexDirection="column" >             
+                </FlexboxLayout>
+                <ActivityIndicator  busy="{{ process }}" class="indic" color="#485479"></ActivityIndicator>
+             </GridLayout> 
+             </ScrollView>
+        </PullRefresh:PullToRefresh>
+
+        <!-- <mdc:BottomNavigationBar
+            titleVisibility='{{ vis }}'
+            activeColor="#FFE7A8"
+            inactiveColor="white"
+            backgroundColor="#485479"
+            tabSelected="onTabSelected"
+            row="1"
+            visibility="{{ menu_show }}"
+        >
+            <mdc:BottomNavigationTab title="Монитор" icon="res://monitor"/>
+            <mdc:BottomNavigationTab title="Out of stock" icon="res://stock"/>
+        </mdc:BottomNavigationBar> -->
+
+    </GridLayout>    
+</Page>

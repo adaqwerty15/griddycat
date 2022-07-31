@@ -1,0 +1,8 @@
+<FlexboxLayout loaded="onLoad" flexDirection="column" class="card" xmlns:chart="nativescript-ui-chart" xmlns="http://schemas.nativescript.org/tns.xsd">
+                    <Label class="card_title" textWrap="true" text="{{ title }}"></Label>
+
+                    <FlexboxLayout  id="chartto" class="card_content hor"  justifyContent="center">
+                       
+                    </FlexboxLayout>
+                
+ </FlexboxLayout>

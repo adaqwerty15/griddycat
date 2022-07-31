@@ -1,0 +1,52 @@
+<FlexboxLayout xmlns:lv1="nativescript-ui-listview" xmlns="http://schemas.nativescript.org/tns.xsd" loaded="onLoad" flexDirection="column" class="card">
+        <Label class="card_title" text="{{ title }}" textWrap="true"></Label>
+			
+
+                <!-- <lv1:RadListView items="{{ parts }}">
+                            <lv1:RadListView.itemTemplate>
+                                <FlexboxLayout  class="card_content hor"  justifyContent="center">
+                                <FlexboxLayout  flexDirection="column" justifyContent="center" class="card_content_block" >
+                                    <Label  class="card_content_block_title" text="{{title}}"  ></Label>
+                                    <Labe</FlexboxLayout>l text="{{fvalue}}" class="card_content_block_value"  ></Label>
+                                </FlexboxLayout>
+                                <StackLayout orientation="vertical" class="vline"></StackLayout>
+                                </FlexboxLayout>
+                                
+                                
+             
+                             </lv1:RadListView.itemTemplate>
+                </lv1:RadListView> --> 
+
+                <FlexboxLayout  id="commonparts" class="card_content hor"  justifyContent="center">
+				
+				<!-- <FlexboxLayout  flexDirection="column" justifyContent="center" class="card_content_block" >
+		            <Label  class="card_content_block_title" text="{{ parts[0].title }}"  ></Label>
+		            <Label text="{{ parts[0].fvalue}}" class="card_content_block_value"  ></Label>
+		        </FlexboxLayout>
+
+		        <StackLayout orientation="vertical" class="vline"></StackLayout>
+		     
+                <FlexboxLayout   flexDirection="column" class="card_content_block" justifyContent="center">
+                    <Label class="card_content_block_title" text="{{ parts[1].title }}"   ></Label>
+                    <Label text="{{ parts[1].fvalue }}" class="card_content_block_value"  ></Label>
+                </FlexboxLayout>
+
+                <StackLayout orientation="vertical" class="vline"></StackLayout>
+
+                <FlexboxLayout   flexDirection="column" class="card_content_block"  justifyContent="center">
+                    <Label class="card_content_block_title last" text="Товары"  ></Label>
+                    <Label text="5" class="card_content_block_value"  ></Label>
+                </FlexboxLayout>
+
+                <StackLayout orientation="vertical" class="vline"></StackLayout>
+
+                <FlexboxLayout   flexDirection="column" class="card_content_block"  justifyContent="center">
+                    <Label class="card_content_block_title last" text="Товары"  ></Label>
+                    <Label text="5" class="card_content_block_value"  ></Label>
+                </FlexboxLayout> -->
+
+                </FlexboxLayout>
+
+            
+           
+</FlexboxLayout>

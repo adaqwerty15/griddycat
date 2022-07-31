@@ -1,0 +1,22 @@
+<FlexboxLayout loaded="onLoad" flexDirection="column" class="card" xmlns:chart="nativescript-ui-chart" xmlns="http://schemas.nativescript.org/tns.xsd">
+                    <Label class="card_title" textWrap="true" text="{{ title }}"></Label>
+
+                    <FlexboxLayout  class="card_middle hor"  justifyContent="center">
+                            <FlexboxLayout  flexDirection="column" justifyContent="center"  class="card_content_block " >
+                                <Label  class="card_content_block_title" text="{{ parts[0].title }}"  ></Label>
+                                <Label text="{{ parts[0].fvalue}}" class="card_content_block_value"  ></Label>
+                            </FlexboxLayout>
+                            <StackLayout orientation="vertical" class="vline"></StackLayout>
+                            <FlexboxLayout   flexDirection="column" class="card_content_block" justifyContent="center">
+                                <Label class="card_content_block_title" text="{{ parts[1].title }}"   ></Label>
+                                <Label text="{{ parts[1].fvalue}}" class="card_content_block_value"  ></Label>
+                            </FlexboxLayout>
+                    </FlexboxLayout>
+
+                    <Label class="gline"></Label>
+
+                    <FlexboxLayout  class="card_content hor" id="chartturnover" justifyContent="center" flexDirection="column">    
+                            
+                    </FlexboxLayout>
+                
+ </FlexboxLayout>

@@ -1,0 +1,29 @@
+<Page class="page" loaded="onPageLoaded" actionBarHidden="true" xmlns="http://schemas.nativescript.org/tns.xsd">
+    <ScrollView  orientation="vertical" flexGrow="1">
+        <FlexboxLayout  flexDirection="column" justifyContent="flex-start"  class="main_block ">
+            <Button alignSelf="flex-end" isEnabled="{{ !processing }}" text="ДЕМО" tap="{{demo}}" class="button m-t-20"></Button>
+            <StackLayout class="p">
+              <FlexboxLayout class="form" >
+                <Image src="res://cat" stretch="none" class="img"/> 
+                <Label class="page_title" text="GriddyCat" textWrap="true"/>
+              </FlexboxLayout>
+              
+              <GridLayout rows="auto"> 
+                <StackLayout class="input-field">
+                  <TextField isEnabled="{{ !processing }}" hint="Введите логин" style.placeholderColor="rgb(0,0,0)" text="{{ username }}" class="input input_text" autocorrect="false" autocapitalizationType="none" returnKeyType="next" ></TextField>
+             
+                  <FlexboxLayout class="input" flexDirection="row">  
+                    <TextField isEnabled="{{ !processing }}" hint="Введите пароль" style.placeholderColor="rgb(0,0,0)" text="{{ password }}" class="input_data input_text" autocorrect="false" autocapitalizationType="none" secure="true" returnKeyType="next"></TextField>
+                    <Image src="res://none" class="img_psd" tap="onClickShowPassword"></Image>
+                  </FlexboxLayout>
+                </StackLayout>
+
+                <ActivityIndicator  busy="{{ processing }}" class="indic" color="#485479"></ActivityIndicator>
+              </GridLayout>
+
+              <Button isEnabled="{{ !processing }}" text="Войти" tap="{{submit}}" class="button"></Button>
+
+            </StackLayout>           
+        </FlexboxLayout>
+    </ScrollView >
+</Page>

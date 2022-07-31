@@ -1,0 +1,3 @@
+<FlexboxLayout loaded="onLoad" flexDirection="column" class="card">
+        <Label textWrap="true" class="card_title_edit" text="{{ title }}"></Label>          
+</FlexboxLayout>

@@ -1,0 +1,48 @@
+
+ <FlexboxLayout  loaded="onLoad" xmlns:chart="nativescript-ui-chart" xmlns="http://schemas.nativescript.org/tns.xsd">
+
+                             <chart:RadCartesianChart height="230">
+                                <chart:RadCartesianChart.grid>
+                                    <chart:RadCartesianChartGrid
+                                        horizontalLinesVisible="true"
+                                        verticalLinesVisible="true"
+                                        horizontalStripLinesVisible="false"
+                                        verticalStripLinesVisible="false"
+                                        horizontalStrokeColor="#e5e5e5"
+                                        verticalStrokeColor="#e5e5e5"
+                                        horizontalStrokeWidth="1"
+                                        verticalStrokeWidth="1">
+                                    </chart:RadCartesianChartGrid>
+                                </chart:RadCartesianChart.grid>
+                                <chart:RadCartesianChart.series>
+                                     <chart:LineSeries
+                                        items="{{ plot[0] }}"
+                                        categoryProperty="x"
+                                        valueProperty="y">
+                                     </chart:LineSeries> 
+                                </chart:RadCartesianChart.series>
+
+                                <chart:LineSeries.horizontalAxis>
+                                    <chart:DateTimeContinuousAxis 
+                                         majorStepUnit="Day" majorStep="{{ majorStep }}" dateFormat="dd.MM E"
+                                        labelFitMode="Multiline">
+                                    </chart:DateTimeContinuousAxis>
+                                    <!-- <chart:CategoricalAxis  labelFitMode="Multiline" majorStep="2" firstLabelVisibility="Hidden"/> -->
+                                </chart:LineSeries.horizontalAxis>
+                                <chart:RadCartesianChart.trackball >
+                                      <chart:Trackball trackBallContentRequested="onTrackBallContentRequested"/>
+                                  </chart:RadCartesianChart.trackball>
+                                <chart:LineSeries.verticalAxis>
+                                    <chart:LinearAxis minimum="{{ min }}" labelFormat="{{ fstr }}" labelLayoutMode="Outer" />
+                                </chart:LineSeries.verticalAxis>
+                                  <chart:RadCartesianChart.palettes>
+                                    <chart:Palette>
+                                        <chart:Palette.entries>
+                                            <chart:PaletteEntry strokeColor="#F0DA6D" fillColor="#F0DA6D" ios:strokeWidth="2" android:strokeWidth="7"/>
+                                        </chart:Palette.entries>
+                                    </chart:Palette>
+                                </chart:RadCartesianChart.palettes>   
+                                
+                            </chart:RadCartesianChart>
+                            
+ </FlexboxLayout>

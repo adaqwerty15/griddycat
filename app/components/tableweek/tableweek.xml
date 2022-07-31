@@ -1,0 +1,29 @@
+<FlexboxLayout loaded="onLoad" flexDirection="column" class="card">
+        <Label class="card_title" textWrap="true" text="{{ title }}"></Label>
+                    
+        <FlexboxLayout  class="card_content hor list"  justifyContent="center" >
+                            
+            <StackLayout class="table_container">
+                <GridLayout columns="*,*,*,*,*" rows="auto">
+                    <Label  row="0" col="0" textWrap="true" text="{{parts[0].tableTrHead.tilePartTableTrCells[0].fvalue}}" class="tablehead"/>
+                    <Label  row="0" col="1" textWrap="true" text="{{parts[0].tableTrHead.tilePartTableTrCells[1].fvalue}}" class="tablehead"/>
+                    <Label  row="0" col="2" textWrap="true" text="{{parts[0].tableTrHead.tilePartTableTrCells[2].fvalue}}" class="tablehead"/>
+                    <Label  row="0" col="3" textWrap="true" text="{{parts[0].tableTrHead.tilePartTableTrCells[3].fvalue}}" class="tablehead"/>
+                    <Label  row="0" col="4" textWrap="true" text="{{parts[0].tableTrHead.tilePartTableTrCells[4].fvalue}}" class="tablehead"/>
+                </GridLayout>
+                <!-- <ScrollView> -->
+                <Repeater  items="{{ parts[0].tableTrContents }}">
+                    <Repeater.itemTemplate>
+                        <GridLayout columns="*,*,*,*,*" rows="auto">
+                            <Label  row="0" col="0" textWrap="true" text="{{tilePartTableTrCells[0].fvalue}}" class="{{ 'tablestr p-l-5' + (class === 'odd' ? ' odd': '')}}"/>
+                            <Label  row="0" col="1" textWrap="true" text="{{tilePartTableTrCells[1].fvalue}}" class="{{'tablestr' + (class === 'odd' ? ' odd': '')}}"/>
+                            <Label  row="0" col="2" textWrap="true" text="{{tilePartTableTrCells[2].fvalue}}" class="{{'tablestr' + (class === 'odd' ? ' odd': '')}}"/>
+                            <Label  row="0" col="3" textWrap="true" text="{{tilePartTableTrCells[3].fvalue}}" class="{{'tablestr' + (class === 'odd' ? ' odd': '')}}"/>
+                            <Label  row="0" col="4" textWrap="true" text="{{tilePartTableTrCells[4].fvalue}}" class="{{'tablestr' + (class === 'odd' ? ' odd': '')}}"/>
+                        </GridLayout>
+                    </Repeater.itemTemplate>
+                </Repeater>
+            </StackLayout>
+                            
+        </FlexboxLayout>              
+</FlexboxLayout>

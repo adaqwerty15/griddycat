@@ -1,0 +1,41 @@
+<FlexboxLayout loaded="onLoad" flexDirection="column" class="card">
+        <Label class="card_title" textWrap="true" text="{{ title }}"></Label>
+                    
+        <FlexboxLayout  class="card_content hor list"  justifyContent="center" >
+                            
+            <StackLayout>
+                <!-- <ScrollView> -->
+                    <Repeater  items="{{ parts[0].top }}"  class="card-layout line">
+                        <Repeater.itemTemplate>
+                            <GridLayout columns="40, *, auto" rows="auto">
+                                <Label  row="0" col="0" textWrap="true" text="{{ num }}" class="num"/>
+                                <Label  row="0" col="1" textWrap="true" text="{{ text }}" class="cont" />
+                                <Label  row="0" col="2" textWrap="true" text="{{ fvalue }}" class="r"/>
+                            </GridLayout>
+                        </Repeater.itemTemplate>
+                    </Repeater>
+
+                    <Repeater  items="{{ parts[0].antitop }}"  class="card-layout line">
+                        <Repeater.itemTemplate>
+                            <GridLayout columns="40, *, auto" rows="auto">
+                                <Label  row="0" col="0" textWrap="true" text="{{ num }}" class="num"/>
+                                <Label  row="0" col="1" textWrap="true" text="{{ text }}" class="cont" />
+                                <Label  row="0" col="2" textWrap="true" text="{{ fvalue }}" class="r"/>
+                            </GridLayout>
+                        </Repeater.itemTemplate>
+                    </Repeater>
+
+                    <!-- <Repeater width="100%" items="{{ parts[0].antitop }}" >
+                        <Repeater.itemTemplate>
+                            <FlexboxLayout flexDirection="row" flexWrap="wrap" class="card-layout line" >
+                                <Label   textWrap="true" text="{{ num }}" class="num"/>
+                                <Label   textWrap="true" text="{{ text }}" class="cont" />
+                                <Label   alignSelf="flex-end" textWrap="true" text="{{ fvalue }}" class="r"/>
+                            </FlexboxLayout>
+                        </Repeater.itemTemplate>
+                    </Repeater> -->
+                <!-- </ScrollView> -->
+            </StackLayout>
+                            
+        </FlexboxLayout>              
+</FlexboxLayout>

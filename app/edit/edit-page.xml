@@ -1,0 +1,36 @@
+<Page
+    class="page"
+    navigatingTo="onNavigatingTo" 
+    loaded="onPageLoaded" 
+    xmlns:lv="nativescript-ui-listview"
+    xmlns:chart="nativescript-ui-chart"
+    xmlns:nsDrawer="nativescript-ui-sidedrawer"
+    xmlns="http://schemas.nativescript.org/tns.xsd"
+    id="editpage">
+
+    <ActionBar class="action-bar">
+        <NavigationButton ios.systemIcon="1" icon="res://close"
+            ios.position="left" tap="onCancelButtonTap">
+        </NavigationButton>
+        <Label class="action-bar-title" text="Редактировать"></Label>
+         <ActionItem ios.systemIcon="0" icon="res://done" ios.position="right" tap="onDoneButtonTap"></ActionItem>
+    </ActionBar>
+    <!-- <ScrollView  orientation="vertical" flexGrow="1"> -->
+
+    <GridLayout class="page-content"> 
+        <lv:RadListView items="{{ items }}"  itemReorder="true" itemReordered="onItemReordered" id="list">
+            <lv:RadListView.itemTemplate>
+            <!-- tap="onDoneButtonTap" -->
+                <!-- <FlexboxLayout flexDirection="column" class="card"> -->
+                <FlexboxLayout flexDirection="row" class="{{ class, class }}" alignItems="center" alignContent="center" justifyContent="space-between" backgroundColor="#485479">
+                    <Label textWrap="true" class="card_title_edit" text="{{ title, title }}" id="{{ id, id }}"></Label>    
+                    <StackLayout orientation="vertical"  class="vertical-line"></StackLayout>  
+                    <Image  src="{{ res, res }}" flexGrow="1"  class="state" tap="clickChangeState" ></Image>       
+                </FlexboxLayout>
+            </lv:RadListView.itemTemplate>
+        </lv:RadListView>
+         <ActivityIndicator  busy="{{ process, process }}" class="indic" color="#6545b6"></ActivityIndicator>
+    </GridLayout>       
+    <!-- </ScrollView>  -->
+    
+</Page>

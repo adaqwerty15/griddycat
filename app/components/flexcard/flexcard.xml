@@ -1,0 +1,4 @@
+<FlexboxLayout  flexDirection="column" justifyContent="center" class="card_content_block" loaded="onLoad" >
+		            <Label  class="card_content_block_title" text="{{ title }}"  ></Label>
+		            <Label text="{{ fvalue}}" class="card_content_block_value"  ></Label>
+</FlexboxLayout>
